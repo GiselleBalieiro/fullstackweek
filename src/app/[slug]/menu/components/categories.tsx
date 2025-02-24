@@ -30,9 +30,13 @@ const RestaurantCategories = ({ restaurant }: RestaurantCategoriesProps) => {
   const handleCategoryClick = (category: MenuCategoriesWithProducts) => {
     setSelectedCategory(category);
   };
-  const getCategoryButtonVariant = (category: MenuCategoriesWithProducts) => {
-    return selectedCategory.id === category.id ? "default" : "secondary";
+
+  const getCategoryButtonClasses = (category: MenuCategoriesWithProducts) => {
+    return selectedCategory.id === category.id
+      ? "bg-yellow-500 text-black"
+      : "bg-white text-black";
   };
+
   return (
     <div className="relative z-50 mt-[-1.5rem] rounded-t-3xl bg-white">
       <div className="p-5">
@@ -60,9 +64,8 @@ const RestaurantCategories = ({ restaurant }: RestaurantCategoriesProps) => {
             <Button
               onClick={() => handleCategoryClick(category)}
               key={category.id}
-              variant={getCategoryButtonVariant(category)}
               size="sm"
-              className="rounded-full"
+              className={`rounded-full ${getCategoryButtonClasses(category)}`}
             >
               {category.name}
             </Button>
