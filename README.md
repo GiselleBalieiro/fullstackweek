@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Totem de Pedidos - McDonald's (Simulação)
 
-## Getting Started
+Este projeto é uma simulação de um **totem de pedidos** inspirado no modelo utilizado no **McDonald's** para pedidos no restaurante. O sistema foi desenvolvido utilizando **React**, **TypeScript**, **PostgreSQL**, **Prisma ORM**, **Tailwind CSS** e **Stripe** para processar os pagamentos, em conjunto com um curso de 14 horas de carga horária.
 
-First, run the development server:
+## Tecnologias Usadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **React**: Biblioteca para construção de interfaces de usuário interativas e reativas.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática ao código.
+- **PostgreSQL**: Banco de dados relacional de código aberto.
+- **Prisma ORM**: Ferramenta para interagir com bancos de dados de forma eficiente e segura.
+- **Tailwind CSS**: Framework de CSS para estilização utilitária e responsiva.
+- **Stripe**: API de pagamento para realizar transações financeiras de forma segura.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Funcionalidades
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- O sistema permite aos usuários visualizar o cardápio, adicionar produtos ao carrinho e finalizar o pedido.
+- Ao finalizar o pedido, o usuário pode verificar o resumo da compra e o total.
+- O pagamento é processado de forma segura utilizando a **Stripe**.
+- A aplicação também permite a consulta de pedidos anteriores com base no CPF do cliente.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Como Executar o Projeto  
 
-## Learn More
+1. Clone o repositório:  
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   
+2. Acesse o diretório do projeto:
+   cd seu-repositorio
 
-To learn more about Next.js, take a look at the following resources:
+3. Instale as dependências do projeto:
+   npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Configure o banco de dados: 
+   Certifique-se de que você tenha o PostgreSQL instalado e configurado. Crie um banco de dados e configure as variáveis de ambiente para a conexão com o banco de dados.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5. Configure a API do Stripe:
+   STRIPE_SECRET_KEY="your_stripe_secret_key"
 
-## Deploy on Vercel
+6. Rode as migrações com Prisma:
+   npx prisma migrate dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+7. Inicie o servidor:
+   npm run dev
