@@ -15,4 +15,5 @@ if (process.env.NODE_ENV === "production") {
   prisma = global.cachedPrisma;
 }
 
+// vou usar para chamar meu banco de dados
 export const db = prisma;
