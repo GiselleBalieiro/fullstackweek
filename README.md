@@ -46,4 +46,5 @@ Este projeto é uma simulação de um **totem de pedidos** inspirado no modelo u
 O projeto está hospedado na Vercel. Para acessar a aplicação, basta visitar o seguinte link:
 
 https://fullstackweek-three.vercel.app/fsw-donalds
+
 Certifique-se de incluir /fsw-donalds na URL ao acessar o projeto no Vercel.
